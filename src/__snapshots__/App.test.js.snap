@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly without crashing 1`] = `
+<div>
+  Afya
+</div>
+`;

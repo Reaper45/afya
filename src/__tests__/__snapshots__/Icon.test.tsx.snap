@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Shows icon given src file 1`] = `
+exports[`render active icon 1`] = `
+<Styled(img)
+  active={true}
+  src="static/file.svg"
+/>
+`;
+
+exports[`render icon correctly 1`] = `
 <Styled(img)
   src="static/file.svg"
 />

@@ -4,7 +4,7 @@ export interface ITheme {
     dark: string;
     light: string;
     secondary: string;
-    icon: string;
+    accent: string;
   };
 }
 
@@ -14,6 +14,6 @@ export const theme: ITheme = {
     dark: "#3C366B",
     light: "#A3BFFA",
     secondary: "#222222",
-    icon: "A0AEC0"
+    accent: "A0AEC0"
   }
 };

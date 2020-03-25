@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shows icon given src file 1`] = `
+<Styled(img)
+  src="static/file.svg"
+/>
+`;

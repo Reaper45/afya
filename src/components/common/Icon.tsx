@@ -1,13 +1,14 @@
-import React, { HTMLAttributes } from 'react'
+import * as React from 'react'
+import { ImgHTMLAttributes } from 'react'
 import styled from 'lib/emotion'
 
-const IconWrapper = styled("img")<{ active?: boolean }>`
+const IconWrapper = styled("img")<{ isActive?: boolean }>`
   color: ${props =>
-    props.active ? props.theme.colors.icon : props.theme.colors.primary};
+    props.isActive ? props.theme.colors.icon : props.theme.colors.primary};
 `;
 
-const Icon: React.FC<HTMLAttributes<HTMLImageElement> & {
-  active?: boolean;
+const Icon: React.FC<ImgHTMLAttributes<HTMLImageElement> & {
+  isActive?: boolean;
 }> = props => {
   return <IconWrapper {...props} />;
 };

@@ -4,14 +4,16 @@ export interface ITheme {
     dark: string;
     light: string;
     secondary: string;
+    icon: string;
   };
 }
 
 export const theme: ITheme = {
   colors: {
-    primary: "#805AD5",
-    dark: "#44337A",
-    light: "#FAF5FF",
-    secondary: "#222222"
+    primary: "#5A67D8",
+    dark: "#3C366B",
+    light: "#A3BFFA",
+    secondary: "#222222",
+    icon: "A0AEC0"
   }
 };

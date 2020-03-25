@@ -22,6 +22,6 @@
     "experimentalDecorators": true,
   },
   "include": [
-    "src", "src/theme.ts"
+    "src", "src/theme.ts", "src/__tests__/Home.test.tsx", "src/__tests__/App.test.js", "src/__tests__/Home.tsx"
   ],
 }

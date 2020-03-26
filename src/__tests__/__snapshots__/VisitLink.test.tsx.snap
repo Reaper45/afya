@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Styled(NavLink)
+  to=""
+>
+  <span
+    data-name="count"
+  >
+    4
+  </span>
+  <span
+    data-name="title"
+  >
+    Kiambu
+  </span>
+  <Icon
+    src="menu.svg"
+  />
+</Styled(NavLink)>
+`;

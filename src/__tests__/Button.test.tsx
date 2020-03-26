@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from "react";
+import React from "react";
 import { shallow, mount } from "enzyme";
 import { ThemeProvider } from "emotion-theming";
 

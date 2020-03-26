@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Styled(Button)
+  icon="menu.svg"
+>
+  <span
+    data-name="count"
+  >
+    4
+  </span>
+  <div>
+    <span
+      data-name="title"
+    >
+      Kiambu
+    </span>
+    <span
+      data-name="description"
+    >
+      Test Description
+    </span>
+  </div>
+</Styled(Button)>
+`;

@@ -1,12 +1,13 @@
 import * as React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import Home from 'components/home';
 
 function App() {
   return (
-    <div>
-      Afya
-    </div>
+    <Switch>
+      <Route path="/" component={Home} />
+    </Switch>
   );
 }
 

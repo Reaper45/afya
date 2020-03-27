@@ -7,9 +7,9 @@ import Icon from './Icon';
 
 const ButtonWrapper = styled("button")`
   outline: none;
-  border: solid 1px ${props => props.theme.colors.primary};
+  border: solid 1px ${props => props.theme.colors.grey};
   background: #fff;
-  padding: 1rem 1.5rem;
+  padding: .65rem 1rem;
   font-size: 0.9rem;
   color: ${props => props.theme.colors.secondary};
   border-radius: 3px;

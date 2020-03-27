@@ -5,15 +5,17 @@ export interface ITheme {
     light: string;
     secondary: string;
     accent: string;
+    grey: string;
   };
 }
 
 export const theme: ITheme = {
   colors: {
-    primary: "#5A67D8",
+    primary: "#4e1ed4",
     dark: "#3C366B",
-    light: "#A3BFFA",
+    light: "#f5f6fa",
     secondary: "#222222",
-    accent: "A0AEC0"
+    accent: "#A0AEC0",
+    grey: "#E2E8F0"
   }
 };

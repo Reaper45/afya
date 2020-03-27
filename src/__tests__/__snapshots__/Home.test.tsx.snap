@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Home component renders without crashing 1`] = `<div />`;
+exports[`Test correct home layout renders without crashing 1`] = `
+<Styled(div)>
+  <Nav />
+  <Styled(div)>
+    <Header />
+    <Styled(main) />
+  </Styled(div)>
+</Styled(div)>
+`;

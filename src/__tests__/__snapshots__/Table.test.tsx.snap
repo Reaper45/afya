@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders table correctly 1`] = `
+<Styled(table)>
+  <Styled(thead)>
+    <Styled(th)>
+      Id
+    </Styled(th)>
+    <Styled(th)>
+      Name
+    </Styled(th)>
+    <Styled(th)>
+      Description
+    </Styled(th)>
+  </Styled(thead)>
+  <Styled(tbody)>
+    <Styled(tr)>
+      <Styled(td)>
+        1
+      </Styled(td)>
+      <Styled(td)>
+        Test Name
+      </Styled(td)>
+      <Styled(td)>
+        Test Description
+      </Styled(td)>
+    </Styled(tr)>
+  </Styled(tbody)>
+</Styled(table)>
+`;

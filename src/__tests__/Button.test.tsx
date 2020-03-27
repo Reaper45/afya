@@ -32,3 +32,4 @@ it("handles click event", () => {
   expect(onClickHandler).toHaveBeenCalled();
   expect(onClickHandler.mock.calls[0][0].value).toBe("clicked");
 });
+

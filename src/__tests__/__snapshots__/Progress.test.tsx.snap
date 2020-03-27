@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<Styled(span)>
+  <Styled(span)
+    data-name="progress"
+    inverted={false}
+    progress={0}
+  />
+</Styled(span)>
+`;

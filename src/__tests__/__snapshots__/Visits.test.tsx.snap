@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders all visits 1`] = `
+<Styled(div)>
+  <b>
+    Visits
+  </b>
+  <br />
+  <FilterItem
+    active={false}
+    count={7}
+    key="1"
+    onClick={[Function]}
+    title="Kiambiu"
+  />
+  <FilterItem
+    active={false}
+    count={12}
+    key="2"
+    onClick={[Function]}
+    title="Mkuru Kwa Ruben"
+  />
+  <FilterItem
+    active={false}
+    count={26}
+    key="3"
+    onClick={[Function]}
+    title="Mkuru Kwa Njenga"
+  />
+  <FilterItem
+    active={false}
+    count={38}
+    key="4"
+    onClick={[Function]}
+    title="Baba dogo"
+  />
+  <FilterItem
+    active={false}
+    count={41}
+    key="5"
+    onClick={[Function]}
+    title="Kosovo"
+  />
+  <FilterItem
+    active={false}
+    count={24}
+    key="6"
+    onClick={[Function]}
+    title="Mukuru Kayaba"
+  />
+</Styled(div)>
+`;
+
+exports[`renders without crashing 1`] = `
+<Styled(div)
+  data-name="visit-item"
+>
+  <b>
+    Visits
+  </b>
+  <br />
+  <FilterItem
+    active={false}
+    count={7}
+    key="1"
+    onClick={[Function]}
+    title="Kiambiu"
+  />
+  <FilterItem
+    active={false}
+    count={12}
+    key="2"
+    onClick={[Function]}
+    title="Mkuru Kwa Ruben"
+  />
+  <FilterItem
+    active={false}
+    count={26}
+    key="3"
+    onClick={[Function]}
+    title="Mkuru Kwa Njenga"
+  />
+  <FilterItem
+    active={false}
+    count={38}
+    key="4"
+    onClick={[Function]}
+    title="Baba dogo"
+  />
+  <FilterItem
+    active={false}
+    count={41}
+    key="5"
+    onClick={[Function]}
+    title="Kosovo"
+  />
+  <FilterItem
+    active={false}
+    count={24}
+    key="6"
+    onClick={[Function]}
+    title="Mukuru Kayaba"
+  />
+</Styled(div)>
+`;

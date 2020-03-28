@@ -5,7 +5,7 @@ import { useState } from "react";
 import styled from "lib/emotion";
 import Nav from './Nav';
 import Header from './Header';
-import FilterItem from 'components/common/FilterItem';
+import Visits, { VisitsType } from './Visits';
 
 const HomeWrapper = styled("div")`
   display: flex;
@@ -31,25 +31,6 @@ const Title = styled("div")`
   margin-bottom: 1em;
 `;
 
-const Visits = styled("div")`
-  background: #fff;
-  border-radius: 3px;
-  padding: 1em;
-  background: #fff;
-  height: 100%;
-  > b {
-    display: block;
-    text-transform: uppercase;
-    color: ${props => props.theme.colors.accent};
-    opacity: .66;
-    font-weight: bolder;
-    font-size: .7rem;
-  }
-  button {
-    width: 100%;
-  }
-`;
-
 const Grid = styled("div")`
   display: grid;
   height: 100%;
@@ -58,11 +39,7 @@ const Grid = styled("div")`
   grid-auto-rows: minmax(100px, auto);
 `;
 
-const hospitalVisits: Array<{
-  count: number;
-  title: string;
-  key: string;
-}> = [
+const hospitalVisits: VisitsType = [
   {count: 7, title: "Kiambiu", key: "1" },
   {count: 12, title: "Mkuru Kwa Ruben", key: "2" },
   {count: 26, title: "Mkuru Kwa Njenga", key: "3" },
@@ -81,17 +58,7 @@ export default function Home() {
         <MainWrapper>
           <Title>Analytics</Title>
           <Grid>
-            <Visits>
-              <b>Visits</b>
-              <br/>
-              {
-                hospitalVisits.map(visit =>
-                <FilterItem
-                  active={activeVisit === visit.key}
-                  onClick={() => setActiveVisit(visit.key)}
-                  {...visit} />
-              )}
-            </Visits>
+            <Visits activeVisit={activeVisit} visits={hospitalVisits} setActiveVisit={setActiveVisit} />
           </Grid>
         </MainWrapper>
       </Container>

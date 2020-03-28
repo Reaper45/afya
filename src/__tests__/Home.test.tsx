@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 import Home from "components/home";
 import Nav from "components/home/Nav";
@@ -26,3 +26,4 @@ describe("Test correct home layout", () => {
     expect(component.containsMatchingElement(<Header />));
   });
 });
+

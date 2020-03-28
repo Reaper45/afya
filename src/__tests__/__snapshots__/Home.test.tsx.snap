@@ -10,54 +10,44 @@ exports[`Test correct home layout renders without crashing 1`] = `
         Analytics
       </Styled(div)>
       <Styled(div)>
-        <Styled(div)>
-          <b>
-            Visits
-          </b>
-          <br />
-          <FilterItem
-            active={true}
-            count={7}
-            key="1"
-            onClick={[Function]}
-            title="Kiambiu"
-          />
-          <FilterItem
-            active={false}
-            count={12}
-            key="2"
-            onClick={[Function]}
-            title="Mkuru Kwa Ruben"
-          />
-          <FilterItem
-            active={false}
-            count={26}
-            key="3"
-            onClick={[Function]}
-            title="Mkuru Kwa Njenga"
-          />
-          <FilterItem
-            active={false}
-            count={38}
-            key="4"
-            onClick={[Function]}
-            title="Baba dogo"
-          />
-          <FilterItem
-            active={false}
-            count={41}
-            key="5"
-            onClick={[Function]}
-            title="Kosovo"
-          />
-          <FilterItem
-            active={false}
-            count={24}
-            key="6"
-            onClick={[Function]}
-            title="Mukuru Kayaba"
-          />
-        </Styled(div)>
+        <Visits
+          activeVisit="1"
+          setActiveVisit={[Function]}
+          visits={
+            Array [
+              Object {
+                "count": 7,
+                "key": "1",
+                "title": "Kiambiu",
+              },
+              Object {
+                "count": 12,
+                "key": "2",
+                "title": "Mkuru Kwa Ruben",
+              },
+              Object {
+                "count": 26,
+                "key": "3",
+                "title": "Mkuru Kwa Njenga",
+              },
+              Object {
+                "count": 38,
+                "key": "4",
+                "title": "Baba dogo",
+              },
+              Object {
+                "count": 41,
+                "key": "5",
+                "title": "Kosovo",
+              },
+              Object {
+                "count": 24,
+                "key": "6",
+                "title": "Mukuru Kayaba",
+              },
+            ]
+          }
+        />
       </Styled(div)>
     </Styled(main)>
   </Styled(div)>

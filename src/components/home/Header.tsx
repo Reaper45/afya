@@ -11,7 +11,7 @@ import avatar from "static/avatar.jpg";
 const HeaderWrapper = styled("header")`
   display: flex;
   background: #fff;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2em;
   justify-content: space-between;
   align-items: center;
 `;

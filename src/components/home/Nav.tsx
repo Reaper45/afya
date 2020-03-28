@@ -16,6 +16,7 @@ const NavWrapper = styled("nav")`
   padding: 0 2rem;
   background: #fff;
   border-right: 1px solid ${props => props.theme.colors.grey};
+  box-sizing: border-content;
 `;
 
 const Nav: React.FC = () => {

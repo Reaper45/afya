@@ -11,6 +11,7 @@ const AvatarWrapper = styled("div")`
 const TextWrapper = styled("div")`
   margin-right: 1em;
   flex-grow: 1;
+  color: ${props => props.theme.colors.accent};
 `;
 
 const ImageWrapper = styled("img")`
@@ -22,14 +23,13 @@ const ImageWrapper = styled("img")`
 const AvatarTitle = styled("b")`
   display: block;
   font-size: 0.8em;
-  color: #222222;
 `;
 
 const Description = styled("small")`
-  color: ${props => props.theme.colors.accent};
   display: block;
   margin-top: 0.3rem;
   font-size: 0.7em;
+  opacity: .66;
 `;
 
 const Avatar: React.FC<ImgHTMLAttributes<HTMLImageElement> & {

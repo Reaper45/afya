@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-<Styled(Button)
-  icon="menu.svg"
->
+<Styled(button)>
   <span
     data-name="count"
   >
@@ -21,5 +19,16 @@ exports[`renders without crashing 1`] = `
       Test Description
     </span>
   </div>
-</Styled(Button)>
+  <svg
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="heroicon-ui"
+      d="M4 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 2a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 2a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+    />
+  </svg>
+</Styled(button)>
 `;

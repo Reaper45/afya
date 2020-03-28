@@ -27,6 +27,7 @@ const ProgressBar = styled("span")<{ progress: number; inverted?: boolean }>`
 
 const ProgressDescription = styled("small")`
   color: ${props => props.theme.colors.accent};
+  opacity: .66;
   margin-top: .5rem;
   font-size: .7em;
   display: block;

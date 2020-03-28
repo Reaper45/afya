@@ -5,7 +5,61 @@ exports[`Test correct home layout renders without crashing 1`] = `
   <Nav />
   <Styled(div)>
     <Header />
-    <Styled(main) />
+    <Styled(main)>
+      <Styled(div)>
+        Analytics
+      </Styled(div)>
+      <Styled(div)>
+        <Styled(div)>
+          <b>
+            Visits
+          </b>
+          <br />
+          <FilterItem
+            active={true}
+            count={7}
+            key="1"
+            onClick={[Function]}
+            title="Kiambiu"
+          />
+          <FilterItem
+            active={false}
+            count={12}
+            key="2"
+            onClick={[Function]}
+            title="Mkuru Kwa Ruben"
+          />
+          <FilterItem
+            active={false}
+            count={26}
+            key="3"
+            onClick={[Function]}
+            title="Mkuru Kwa Njenga"
+          />
+          <FilterItem
+            active={false}
+            count={38}
+            key="4"
+            onClick={[Function]}
+            title="Baba dogo"
+          />
+          <FilterItem
+            active={false}
+            count={41}
+            key="5"
+            onClick={[Function]}
+            title="Kosovo"
+          />
+          <FilterItem
+            active={false}
+            count={24}
+            key="6"
+            onClick={[Function]}
+            title="Mukuru Kayaba"
+          />
+        </Styled(div)>
+      </Styled(div)>
+    </Styled(main)>
   </Styled(div)>
 </Styled(div)>
 `;

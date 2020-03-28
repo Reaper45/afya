@@ -15,7 +15,7 @@ export const theme: ITheme = {
     dark: "#3C366B",
     light: "#f5f6fa",
     secondary: "#222222",
-    accent: "#A0AEC0",
+    accent: "#2D3748",
     grey: "#E2E8F0"
   }
 };

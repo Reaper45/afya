@@ -4,6 +4,9 @@ import React from "react";
 import styled from "lib/emotion";
 import Button from "components/common/Button";
 import Progress from "components/common/Progress";
+import Avatar from "components/common/Avatar";
+
+import avatar from "static/avatar.jpg";
 
 const HeaderWrapper = styled("header")`
   display: flex;
@@ -13,13 +16,33 @@ const HeaderWrapper = styled("header")`
   align-items: center;
 `;
 
+const RightSection = styled("div")`
+  display: flex;
+  align-items: center;
+  > span:first-of-type {
+    width: 160px;
+  }
+  > div:last-of-type {
+    margin-left: 3em;
+  }
+`;
+
 const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <Button>Add Assesment +</Button>
-      <div>
-        <Progress inverted progress={40} description="24k / 40k patients seen" />
-      </div>
+      <RightSection>
+        <Progress
+          inverted
+          progress={40}
+          description="24k / 40k patients seen"
+        />
+        <Avatar
+          img={avatar}
+          title="Sandra Mamai"
+          description="sandra.mamai@test.com"
+        />
+      </RightSection>
     </HeaderWrapper>
   );
 }

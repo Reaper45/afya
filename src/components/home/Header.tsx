@@ -45,6 +45,6 @@ const Header: React.FC = () => {
       </RightSection>
     </HeaderWrapper>
   );
-}
+};
 
-export default Header
+export default Header;

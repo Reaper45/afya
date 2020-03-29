@@ -6,10 +6,10 @@ import Progress from "components/common/Progress";
 it("render correctly", () => {
   const component = shallow(<Progress />);
   expect(component).toMatchSnapshot();
-})
+});
 
 it("should render description", () => {
-  const component = shallow(<Progress description="24k / 40k patients seen"/>);
+  const component = shallow(<Progress description="24k / 40k patients seen" />);
   expect(component.find('[data-name="description"]').text()).toEqual(
     "24k / 40k patients seen"
   );

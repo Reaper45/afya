@@ -23,4 +23,3 @@ it("should renders description", () => {
     "sandra.mamai@test.com"
   );
 });
-

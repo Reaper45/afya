@@ -1,17 +1,17 @@
-import React from 'react'
-import { ButtonHTMLAttributes } from 'react'
+import React from "react";
+import { ButtonHTMLAttributes } from "react";
 
-import styled from 'lib/emotion';
-import { moreHorizontalIcon } from 'components/common/Icon';
+import styled from "lib/emotion";
+import { moreHorizontalIcon } from "components/common/Icon";
 
 const FilterItemWrapper = styled("button")<{
   outline?: boolean;
   active?: boolean;
 }>`
   padding: 0.5rem 0.5rem 0.5rem 1rem;
-  background: ${props =>
+  background: ${(props) =>
     props.active && !props.outline ? props.theme.colors.primary : `#fff`};
-  color: ${props =>
+  color: ${(props) =>
     props.active && !props.outline
       ? props.theme.colors.light
       : props.theme.colors.accent};
@@ -20,7 +20,7 @@ const FilterItemWrapper = styled("button")<{
   align-items: center;
   justify-content: space-between;
   border: solid 1px
-    ${props =>
+    ${(props) =>
       props.active ? props.theme.colors.primary : props.theme.colors.grey};
   border-radius: 4px;
   font-weight: 700;
@@ -35,7 +35,7 @@ const FilterItemWrapper = styled("button")<{
   svg {
     transform: rotate(90deg);
     display: block;
-    fill: ${props => props.theme.colors.grey};
+    fill: ${(props) => props.theme.colors.grey};
   }
   > div {
     flex-grow: 1;
@@ -51,7 +51,7 @@ const FilterItemWrapper = styled("button")<{
   > [data-name="count"] {
     margin-right: 1rem;
     display: block;
-    color: ${props =>
+    color: ${(props) =>
       props.active ? props.theme.colors.light : props.theme.colors.primary};
   }
 `;
@@ -64,7 +64,9 @@ export interface IFilterItemProps {
   outline?: boolean;
 }
 
-const FilterItem: React.FC<ButtonHTMLAttributes<HTMLButtonElement> & IFilterItemProps> = ({ count, title, description, ...props }) => {
+const FilterItem: React.FC<
+  ButtonHTMLAttributes<HTMLButtonElement> & IFilterItemProps
+> = ({ count, title, description, ...props }) => {
   return (
     <FilterItemWrapper {...props}>
       {count && <span data-name="count">{count}</span>}

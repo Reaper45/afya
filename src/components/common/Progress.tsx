@@ -1,9 +1,9 @@
-import React from 'react'
+import * as React from "react";
 
 import styled from "lib/emotion";
 
 const ProgressWrapper = styled("span")<{ inline?: boolean }>`
-  ${props =>
+  ${(props) =>
     props.inline &&
     `
   display: flex;
@@ -15,8 +15,12 @@ const ProgressWrapper = styled("span")<{ inline?: boolean }>`
   }
 `;
 
-const ProgressBar = styled("span")<{ progress?: number; inverted?: boolean; gradient?: boolean; }>`
-  ${props =>
+const ProgressBar = styled("span")<{
+  progress?: number;
+  inverted?: boolean;
+  gradient?: boolean;
+}>`
+  ${(props) =>
     props.inverted &&
     `
     background: ${props.theme.colors.grey};
@@ -26,25 +30,28 @@ const ProgressBar = styled("span")<{ progress?: number; inverted?: boolean; grad
   display: block;
   :after {
     content: "";
-    background: ${props => props.gradient ? `linear-gradient(90deg, ${props.theme.colors.primary} 0%, #B794F4 100%)` : props.theme.colors.primary};
+    background: ${(props) =>
+      props.gradient
+        ? `linear-gradient(90deg, ${props.theme.colors.primary} 0%, #B794F4 100%)`
+        : props.theme.colors.primary};
     height: 4px;
-    width: ${props => props.progress}%;
+    width: ${(props) => props.progress}%;
     border-radius: 2px;
     display: block;
   }
 `;
 
 const ProgressDescription = styled("small")`
-  color: ${props => props.theme.colors.accent};
-  opacity: .66;
-  margin-top: .5rem;
-  font-size: .7em;
+  color: ${(props) => props.theme.colors.accent};
+  opacity: 0.66;
+  margin-top: 0.5rem;
+  font-size: 0.7em;
   display: block;
 `;
 
 /**
  * Display the progress bar
- * 
+ *
  * @param {number} props.progress progress percentage
  */
 const Progress: React.FC<{
@@ -73,10 +80,10 @@ const Progress: React.FC<{
   );
 };
 
-Progress.defaultProps ={
+Progress.defaultProps = {
   inverted: false,
   gradient: false,
   progress: 0,
-}
+};
 
 export default Progress;

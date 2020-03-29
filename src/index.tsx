@@ -1,15 +1,15 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { theme } from "theme";
 import { createBrowserHistory } from "history";
-import { Router } from "react-router-dom"
+import { Router } from "react-router-dom";
 import { ThemeProvider } from "emotion-theming";
 
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-const history = createBrowserHistory()
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>

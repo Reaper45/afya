@@ -22,4 +22,3 @@ it("renders table correctly", () => {
   );
   expect(component).toMatchSnapshot();
 });
-

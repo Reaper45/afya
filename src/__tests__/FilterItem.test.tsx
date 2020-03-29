@@ -9,7 +9,6 @@ import Icon, { moreHorizontalIcon } from "components/common/Icon";
 
 import icon from "static/icons/menu.svg";
 
-
 const filter: IFilterItemProps = {
   count: 4,
   title: "Kiambu",

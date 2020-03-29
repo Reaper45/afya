@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 
 // Local Files
 import styled from "lib/emotion";
-import Nav from './Nav';
-import Header from './Header';
-import SectionTitle from 'components/common/SectionTitle';
-import SectionWrapper from 'components/common/SectionWrapper';
-import FilterItem from 'components/common/FilterItem';
-import Button, { ButtonGroup } from 'components/common/Button';
-import { calenderIcon } from 'components/common/Icon';
-import StaffTable, { StaffType } from './StaffTable';
+import Nav from "./Nav";
+import Header from "./Header";
+import SectionTitle from "components/common/SectionTitle";
+import SectionWrapper from "components/common/SectionWrapper";
+import FilterItem from "components/common/FilterItem";
+import Button, { ButtonGroup } from "components/common/Button";
+import { calenderIcon } from "components/common/Icon";
+import StaffTable, { StaffType } from "./StaffTable";
 
 const HomeWrapper = styled("div")`
   display: flex;
@@ -24,7 +24,7 @@ const Container = styled("div")`
 
 const MainWrapper = styled("main")`
   display: flex;
-  background: ${props => props.theme.colors.light};
+  background: ${(props) => props.theme.colors.light};
   padding: 2em 2em 0;
   display: block;
   min-height: calc(100% - 88px);
@@ -86,7 +86,7 @@ const hospitalVisits: Array<{
   { count: 26, title: "Mkuru Kwa Njenga", key: "3" },
   { count: 38, title: "Baba Dogo", key: "4" },
   { count: 41, title: "Kosovo", key: "5" },
-  { count: 24, title: "Mukuru Kayaba", key: "6" }
+  { count: 24, title: "Mukuru Kayaba", key: "6" },
 ];
 
 const issues: Array<{
@@ -99,14 +99,14 @@ const issues: Array<{
   { town: "New York", issue: "Bad Receipt", key: "3" },
   { town: "Mathare", issue: "Late check In", key: "4" },
   { town: "Kiambiu", issue: "Delay in Lab", key: "5" },
-  { town: "Kiambiu", issue: "Careless Waste distribution", key: "6" }
+  { town: "Kiambiu", issue: "Careless Waste distribution", key: "6" },
 ];
 
 const timeFilters: Array<{ label: string; value: string }> = [
   { label: "Day", value: "day" },
   { label: "Week", value: "week" },
   { label: "Month", value: "month" },
-  { label: "Year", value: "year" }
+  { label: "Year", value: "year" },
 ];
 
 const staffs: Array<StaffType> = [
@@ -116,7 +116,7 @@ const staffs: Array<StaffType> = [
     efficiencyDelta: { value: "1,3", delta: "+0.2" },
     npsDelta: { value: "1,2", delta: "+0.3" },
     efficiency: 96,
-    issues: 3
+    issues: 3,
   },
   {
     id: "2",
@@ -124,7 +124,7 @@ const staffs: Array<StaffType> = [
     efficiencyDelta: { value: "1,8", delta: "+0.2" },
     npsDelta: { value: "1,8", delta: "+0.2" },
     efficiency: 92,
-    issues: 6
+    issues: 6,
   },
   {
     id: "3",
@@ -132,7 +132,7 @@ const staffs: Array<StaffType> = [
     efficiencyDelta: { value: "2,7", delta: "2.5" },
     npsDelta: { value: "2,0", delta: "1.8" },
     efficiency: 58,
-    issues: 1
+    issues: 1,
   },
   {
     id: "4",
@@ -140,8 +140,8 @@ const staffs: Array<StaffType> = [
     efficiencyDelta: { value: "2,8", delta: "-0.5" },
     npsDelta: { value: "2,5", delta: "-2.1" },
     efficiency: 74,
-    issues: 8
-  }
+    issues: 8,
+  },
 ];
 
 export default function Home() {
@@ -159,7 +159,7 @@ export default function Home() {
             <Visits data-name="visit-items">
               <SectionTitle>Visits</SectionTitle>
               <br />
-              {hospitalVisits.map(visit => (
+              {hospitalVisits.map((visit) => (
                 <FilterItem
                   active={activeVisit === visit.key}
                   onClick={() => setActiveVisit(visit.key)}
@@ -171,7 +171,7 @@ export default function Home() {
               <SectionTitle>Key Issues</SectionTitle>
               <br />
               <div>
-                {issues.map(issue => (
+                {issues.map((issue) => (
                   <FilterItem
                     outline
                     active={issue.key === activeIssue}
@@ -188,7 +188,7 @@ export default function Home() {
               <br />
               <div>
                 <ButtonGroup inline>
-                  {timeFilters.map(time => (
+                  {timeFilters.map((time) => (
                     <Button
                       key={time.value}
                       active={time.value === activeTimeFilter}

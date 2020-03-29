@@ -47,7 +47,6 @@ it("renders visits correctly", () => {
   ).toHaveLength(6);
 });
 
-
 it("renders issues correctly", () => {
   const component = mount(
     <ThemeProvider theme={theme}>

@@ -19,13 +19,26 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "tslint": "^6.1.0",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "PORT=3030 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:save": "prettier --write \"src/components/**\"",
+    "precommit": "yarn run lint:save && yarn test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write \"src/components/**\""
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,7 +59,10 @@
     "@types/enzyme": "^3.10.5",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4"
+    "enzyme-to-json": "^3.4.4",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.10",
+    "prettier": "^2.0.2"
   },
   "jest": {
     "snapshotSerializers": [

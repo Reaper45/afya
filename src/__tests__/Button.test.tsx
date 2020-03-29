@@ -14,8 +14,12 @@ it("renders button correctly", () => {
 });
 
 it("renders button with icon", () => {
-  const component = shallow(<Button icon={moreHorizontalIcon}>Add Item</Button>);
-  expect(component.containsMatchingElement(<Icon icon={moreHorizontalIcon} />)).toBe(true);
+  const component = shallow(
+    <Button icon={moreHorizontalIcon}>Add Item</Button>
+  );
+  expect(
+    component.containsMatchingElement(<Icon icon={moreHorizontalIcon} />)
+  ).toBe(true);
 });
 
 it("handles click event", () => {
@@ -26,8 +30,7 @@ it("handles click event", () => {
     </ThemeProvider>
   );
 
-  component.find('button').at(0).simulate('click', { value: "clicked" })
+  component.find("button").at(0).simulate("click", { value: "clicked" });
   expect(onClickHandler).toHaveBeenCalled();
   expect(onClickHandler.mock.calls[0][0].value).toBe("clicked");
 });
-

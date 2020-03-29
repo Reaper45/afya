@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
 import styled from "lib/emotion";
 
-import Table from 'components/common/Table';
-import Progress from 'components/common/Progress';
+import Table from "components/common/Table";
+import Progress from "components/common/Progress";
 
 type Delta = {
   value: string;
   delta: string;
-}
+};
 
 export type StaffType = {
   id: string;
@@ -30,13 +30,13 @@ const Delta = styled("span")<{ state?: "positive" | "negative" }>`
     border: solid 7px transparent;
     border-left-width: 5px;
     border-right-width: 5px;
-    ${props => props.state === "positive" && `border-bottom-color: #93dcc3;`}
-    ${props =>
+    ${(props) => props.state === "positive" && `border-bottom-color: #93dcc3;`}
+    ${(props) =>
       props.state === "negative" && `border-top-color: #d43454;`}
     width: 0px;
     height: 0px;
     margin-left: 1em;
-    margin-bottom: ${props => (props.state === "positive" ? "0" : "-7px")};
+    margin-bottom: ${(props) => (props.state === "positive" ? "0" : "-7px")};
   }
 `;
 
@@ -65,9 +65,11 @@ const StaffTable: React.FC<{ staffs: Array<StaffType> }> = ({ staffs }) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {staffs.map(staff => (
+        {staffs.map((staff) => (
           <Table.Row key={staff.id}>
-            <Table.Cell collapsing light>{staff.id}</Table.Cell>
+            <Table.Cell collapsing light>
+              {staff.id}
+            </Table.Cell>
             <Table.Cell collapsing>{staff.name}</Table.Cell>
             <Table.Cell>
               {staff.efficiencyDelta.value}{" "}
@@ -104,4 +106,4 @@ const StaffTable: React.FC<{ staffs: Array<StaffType> }> = ({ staffs }) => {
   );
 };
 
-export default StaffTable
+export default StaffTable;

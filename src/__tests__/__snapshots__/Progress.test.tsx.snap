@@ -4,6 +4,7 @@ exports[`render correctly 1`] = `
 <Styled(span)>
   <Styled(span)
     data-name="progress"
+    gradient={false}
     inverted={false}
     progress={0}
   />

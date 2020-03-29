@@ -2,17 +2,42 @@ import * as React from 'react'
 
 import styled from "lib/emotion";
 
-const TableWrapper = styled("table")``;
+const TableWrapper = styled("table")`
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+`;
 
-const TableHeader = styled("thead")``;
+const TableHeader = styled("thead")`
+  font-size: .8rem;
+`;
 
-const TableHeaderCell = styled("th")``;
+const TableHeaderCell = styled("th")`
+  border-bottom: solid 1px ${props => props.theme.colors.grey};
+  padding: 1.5rem;
+`;
 
-const TableBody = styled("tbody")``;
+const TableBody = styled("tbody")`
+
+`;
 
 const TableRow = styled("tr")``;
 
-const TableCell = styled("td")``;
+const TableCell = styled("td")<{ collapsing?: boolean; light?: boolean }>`
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  ${props =>
+    props.collapsing &&
+    `
+    width: 1px;
+    white-space: nowrap;
+  `}
+  ${props =>
+    props.light &&
+    `
+    opacity: .33;
+  `}
+`;
 
 const TableFooter = styled("tfoot")``;
 

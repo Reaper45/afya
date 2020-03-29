@@ -10,6 +10,7 @@ import SectionWrapper from 'components/common/SectionWrapper';
 import FilterItem from 'components/common/FilterItem';
 import Button, { ButtonGroup } from 'components/common/Button';
 import { calenderIcon } from 'components/common/Icon';
+import StaffTable, { StaffType } from './StaffTable';
 
 const HomeWrapper = styled("div")`
   display: flex;
@@ -24,7 +25,7 @@ const Container = styled("div")`
 const MainWrapper = styled("main")`
   display: flex;
   background: ${props => props.theme.colors.light};
-  padding: 2em 4em 0;
+  padding: 2em 2em 0;
   display: block;
   min-height: calc(100% - 88px);
   box-sizing: border-box;
@@ -45,8 +46,8 @@ const Grid = styled("div")`
 `;
 
 const Visits = styled(SectionWrapper)`
-  height: 100%;
-  grid-row: 1 / 6;
+  // height: 100%;
+  grid-row: 1 / 4;
   button {
     width: 100%;
   }
@@ -68,7 +69,11 @@ const Issues = styled(SectionWrapper)`
 
 const MonitoringPeriod = styled(SectionWrapper)`
   grid-column: 2 / 5;
-  // grid-row: 1 / 2;
+`;
+
+const Staffs = styled(SectionWrapper)`
+  grid-column: 2 / 5;
+  padding: 0 0 1em;
 `;
 
 const hospitalVisits: Array<{
@@ -102,6 +107,41 @@ const timeFilters: Array<{ label: string; value: string }> = [
   { label: "Week", value: "week" },
   { label: "Month", value: "month" },
   { label: "Year", value: "year" }
+];
+
+const staffs: Array<StaffType> = [
+  {
+    id: "1",
+    name: "Mercy Mukoya",
+    efficiencyDelta: { value: "1,3", delta: "+0.2" },
+    npsDelta: { value: "1,2", delta: "+0.3" },
+    efficiency: 96,
+    issues: 3
+  },
+  {
+    id: "2",
+    name: "Kennedy Ayako",
+    efficiencyDelta: { value: "1,8", delta: "+0.2" },
+    npsDelta: { value: "1,8", delta: "+0.2" },
+    efficiency: 92,
+    issues: 6
+  },
+  {
+    id: "3",
+    name: "Stephanie Tomsett",
+    efficiencyDelta: { value: "2,7", delta: "2.5" },
+    npsDelta: { value: "2,0", delta: "1.8" },
+    efficiency: 58,
+    issues: 1
+  },
+  {
+    id: "4",
+    name: "Faith Kityo",
+    efficiencyDelta: { value: "2,8", delta: "-0.5" },
+    npsDelta: { value: "2,5", delta: "-2.1" },
+    efficiency: 74,
+    issues: 8
+  }
 ];
 
 export default function Home() {
@@ -158,9 +198,14 @@ export default function Home() {
                     </Button>
                   ))}
                 </ButtonGroup>
-                <Button active icon={calenderIcon}>10 Dec 2019 - 10 Jan 2020</Button>
+                <Button active icon={calenderIcon}>
+                  10 Dec 2019 - 10 Jan 2020
+                </Button>
               </div>
             </MonitoringPeriod>
+            <Staffs>
+              <StaffTable staffs={staffs} />
+            </Staffs>
           </Grid>
         </MainWrapper>
       </Container>

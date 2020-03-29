@@ -37,8 +37,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write \"src/components/**\"",
-      "git add"
+      "prettier --write \"src/components/**\""
     ]
   },
   "eslintConfig": {

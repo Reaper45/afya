@@ -5,9 +5,7 @@ import { ThemeProvider } from "emotion-theming";
 import { theme } from "theme";
 
 import Button from "components/common/Button";
-import Icon from "components/common/Icon";
-
-import icon from "static/icons/icon-file.svg";
+import Icon, { moreHorizontalIcon } from "components/common/Icon";
 
 it("renders button correctly", () => {
   const component = shallow(<Button>Add Item</Button>);
@@ -16,8 +14,8 @@ it("renders button correctly", () => {
 });
 
 it("renders button with icon", () => {
-  const component = shallow(<Button icon={icon}>Add Item</Button>);
-  expect(component.containsMatchingElement(<Icon src={icon} />)).toBe(true);
+  const component = shallow(<Button icon={moreHorizontalIcon}>Add Item</Button>);
+  expect(component.containsMatchingElement(<Icon icon={moreHorizontalIcon} />)).toBe(true);
 });
 
 it("handles click event", () => {

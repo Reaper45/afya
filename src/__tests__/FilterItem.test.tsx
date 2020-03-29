@@ -4,8 +4,8 @@ import { shallow, mount } from "enzyme";
 import { ThemeProvider } from "emotion-theming";
 
 import { theme } from "theme";
-import FilterItem, { IFilterItemProps, menuIcon } from "components/common/FilterItem";
-import Icon from "components/common/Icon";
+import FilterItem, { IFilterItemProps } from "components/common/FilterItem";
+import Icon, { moreHorizontalIcon } from "components/common/Icon";
 
 import icon from "static/icons/menu.svg";
 
@@ -36,5 +36,5 @@ it("contains more menu", () => {
       <FilterItem {...filter} />
     </ThemeProvider>
   );
-  expect(component.containsMatchingElement(menuIcon)).toBe(true);
+  expect(component.containsMatchingElement(moreHorizontalIcon)).toBe(true);
 });

@@ -30,7 +30,7 @@ const RightSection = styled("div")`
 const Header: React.FC = () => {
   return (
     <HeaderWrapper>
-      <Button>Add Assesment +</Button>
+      <Button>Add Assessment +</Button>
       <RightSection>
         <Progress
           inverted

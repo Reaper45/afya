@@ -1,36 +1,37 @@
 import React from 'react'
 import { ButtonHTMLAttributes } from 'react'
 
-import styled from 'lib/emotion'
-import Button from "./Button";
-
-import menu from "static/icons/icon-more-horiz.svg";
-
-export const menuIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-    <path className="heroicon-ui" d="M4 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 2a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 2a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-  </svg>
-)
+import styled from 'lib/emotion';
+import { moreHorizontalIcon } from 'components/common/Icon';
 
 const FilterItemWrapper = styled("button")<{
   outline?: boolean;
   active?: boolean;
 }>`
   padding: 0.5rem 0.5rem 0.5rem 1rem;
-  background: ${props => (props.active ? props.theme.colors.primary : `#fff`)};
-  color: ${props => (props.active ? props.theme.colors.light : props.theme.colors.accent)};
+  background: ${props =>
+    props.active && !props.outline ? props.theme.colors.primary : `#fff`};
+  color: ${props =>
+    props.active && !props.outline
+      ? props.theme.colors.light
+      : props.theme.colors.accent};
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: solid 1px ${props => (props.active ? props.theme.colors.primary : props.theme.colors.grey)};
+  border: solid 1px
+    ${props =>
+      props.active ? props.theme.colors.primary : props.theme.colors.grey};
   border-radius: 4px;
   font-weight: 700;
   font-size: 0.8rem;
   margin-bottom: 1em;
   outline: none;
-  padding: .65rem .4rem .65rem 1rem;
+  padding: 0.5rem 0.4rem 0.65rem 1rem;
   cursor: pointer;
+  align-items: center;
+  min-height: 50px;
+  transition: border ease-in-out 100ms;
   svg {
     transform: rotate(90deg);
     display: block;
@@ -38,11 +39,20 @@ const FilterItemWrapper = styled("button")<{
   }
   > div {
     flex-grow: 1;
-    padding: 0 1rem;
+    margin-right: 1rem;
     text-align: left;
   }
+  [data-name="title"] {
+    display: block;
+  }
+  [data-name="description"] {
+    opacity: 0.33;
+  }
   > [data-name="count"] {
-    color: ${props => (props.active ? props.theme.colors.light : props.theme.colors.primary)};
+    margin-right: 1rem;
+    display: block;
+    color: ${props =>
+      props.active ? props.theme.colors.light : props.theme.colors.primary};
   }
 `;
 
@@ -60,9 +70,9 @@ const FilterItem: React.FC<ButtonHTMLAttributes<HTMLButtonElement> & IFilterItem
       {count && <span data-name="count">{count}</span>}
       <div>
         <span data-name="title">{title}</span>
-        {description && <span data-name="description">{description}</span>}
+        {description && <small data-name="description">{description}</small>}
       </div>
-      {menuIcon}
+      {moreHorizontalIcon}
     </FilterItemWrapper>
   );
 };

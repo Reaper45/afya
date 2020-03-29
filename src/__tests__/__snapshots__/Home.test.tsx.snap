@@ -10,44 +10,179 @@ exports[`Test correct home layout renders without crashing 1`] = `
         Analytics
       </Styled(div)>
       <Styled(div)>
-        <Visits
-          activeVisit="1"
-          setActiveVisit={[Function]}
-          visits={
-            Array [
-              Object {
-                "count": 7,
-                "key": "1",
-                "title": "Kiambiu",
-              },
-              Object {
-                "count": 12,
-                "key": "2",
-                "title": "Mkuru Kwa Ruben",
-              },
-              Object {
-                "count": 26,
-                "key": "3",
-                "title": "Mkuru Kwa Njenga",
-              },
-              Object {
-                "count": 38,
-                "key": "4",
-                "title": "Baba dogo",
-              },
-              Object {
-                "count": 41,
-                "key": "5",
-                "title": "Kosovo",
-              },
-              Object {
-                "count": 24,
-                "key": "6",
-                "title": "Mukuru Kayaba",
-              },
-            ]
-          }
-        />
+        <Styled(section)
+          data-name="visit-items"
+        >
+          <Styled(b)>
+            Visits
+          </Styled(b)>
+          <br />
+          <FilterItem
+            active={true}
+            count={7}
+            key="1"
+            onClick={[Function]}
+            title="Kiambiu"
+          />
+          <FilterItem
+            active={false}
+            count={12}
+            key="2"
+            onClick={[Function]}
+            title="Mkuru Kwa Ruben"
+          />
+          <FilterItem
+            active={false}
+            count={26}
+            key="3"
+            onClick={[Function]}
+            title="Mkuru Kwa Njenga"
+          />
+          <FilterItem
+            active={false}
+            count={38}
+            key="4"
+            onClick={[Function]}
+            title="Baba Dogo"
+          />
+          <FilterItem
+            active={false}
+            count={41}
+            key="5"
+            onClick={[Function]}
+            title="Kosovo"
+          />
+          <FilterItem
+            active={false}
+            count={24}
+            key="6"
+            onClick={[Function]}
+            title="Mukuru Kayaba"
+          />
+        </Styled(section)>
+        <Styled(section)
+          data-name="issues"
+        >
+          <Styled(b)>
+            Key Issues
+          </Styled(b)>
+          <br />
+          <div>
+            <FilterItem
+              active={false}
+              description="Kosovo"
+              key="1"
+              onClick={[Function]}
+              outline={true}
+              title="Wrong Prescription"
+            />
+            <FilterItem
+              active={true}
+              description="Kiambiu"
+              key="2"
+              onClick={[Function]}
+              outline={true}
+              title="Opened Late"
+            />
+            <FilterItem
+              active={false}
+              description="New York"
+              key="3"
+              onClick={[Function]}
+              outline={true}
+              title="Bad Receipt"
+            />
+            <FilterItem
+              active={false}
+              description="Mathare"
+              key="4"
+              onClick={[Function]}
+              outline={true}
+              title="Late check In"
+            />
+            <FilterItem
+              active={false}
+              description="Kiambiu"
+              key="5"
+              onClick={[Function]}
+              outline={true}
+              title="Delay in Lab"
+            />
+            <FilterItem
+              active={false}
+              description="Kiambiu"
+              key="6"
+              onClick={[Function]}
+              outline={true}
+              title="Careless Waste distribution"
+            />
+          </div>
+        </Styled(section)>
+        <Styled(section)
+          data-name="monitoring-period"
+        >
+          <Styled(b)>
+            Monitoring Period
+          </Styled(b)>
+          <br />
+          <div>
+            <Styled(div)
+              inline={true}
+            >
+              <Button
+                active={false}
+                iconPosition="left"
+                key="day"
+                onClick={[Function]}
+              >
+                Day
+              </Button>
+              <Button
+                active={false}
+                iconPosition="left"
+                key="week"
+                onClick={[Function]}
+              >
+                Week
+              </Button>
+              <Button
+                active={true}
+                iconPosition="left"
+                key="month"
+                onClick={[Function]}
+              >
+                Month
+              </Button>
+              <Button
+                active={false}
+                iconPosition="left"
+                key="year"
+                onClick={[Function]}
+              >
+                Year
+              </Button>
+            </Styled(div)>
+            <Button
+              active={true}
+              icon={
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    className="heroicon-ui"
+                    d="M17 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h2V3a1 1 0 1 1 2 0v1h6V3a1 1 0 0 1 2 0v1zm-2 2H9v1a1 1 0 1 1-2 0V6H5v4h14V6h-2v1a1 1 0 0 1-2 0V6zm4 6H5v8h14v-8z"
+                  />
+                </svg>
+              }
+              iconPosition="left"
+            >
+              10 Dec 2019 - 10 Jan 2020
+            </Button>
+          </div>
+        </Styled(section)>
       </Styled(div)>
     </Styled(main)>
   </Styled(div)>

@@ -13,11 +13,11 @@ exports[`renders without crashing 1`] = `
     >
       Kiambu
     </span>
-    <span
+    <small
       data-name="description"
     >
       Test Description
-    </span>
+    </small>
   </div>
   <svg
     height="24"

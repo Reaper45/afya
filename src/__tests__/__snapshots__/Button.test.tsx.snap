@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders button correctly 1`] = `
-<Styled(button)>
+<Styled(button)
+  iconPosition="left"
+>
   Add Item
 </Styled(button)>
 `;

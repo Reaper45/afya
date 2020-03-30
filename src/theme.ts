@@ -6,6 +6,8 @@ export interface ITheme {
     secondary: string;
     accent: string;
     grey: string;
+    negative: string;
+    positive: string;
   };
 }
 
@@ -17,5 +19,7 @@ export const theme: ITheme = {
     secondary: "#222222",
     accent: "#2D3748",
     grey: "#E2E8F0",
+    negative: "#d43454",
+    positive: "#32f188",
   },
 };

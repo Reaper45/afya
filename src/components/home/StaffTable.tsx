@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "lib/emotion";
+import { getState } from "utils";
 
 import Table from "components/common/Table";
 import Progress from "components/common/Progress";
@@ -30,26 +31,18 @@ const Delta = styled("span")<{ state?: "positive" | "negative" }>`
     border: solid 7px transparent;
     border-left-width: 5px;
     border-right-width: 5px;
-    ${(props) => props.state === "positive" && `border-bottom-color: #93dcc3;`}
     ${(props) =>
-      props.state === "negative" && `border-top-color: #d43454;`}
+      props.state === "positive" &&
+      `border-bottom-color: ${props.theme.colors[props.state]}`};
+    ${(props) =>
+      props.state === "negative" &&
+      `border-top-color: ${props.theme.colors[props.state]}`};
     width: 0px;
     height: 0px;
     margin-left: 1em;
     margin-bottom: ${(props) => (props.state === "positive" ? "0" : "-7px")};
   }
 `;
-
-const getState = (delta: string): undefined | "positive" | "negative" => {
-  switch (delta[0]) {
-    case "+":
-      return "positive";
-    case "-":
-      return "negative";
-    default:
-      return undefined;
-  }
-};
 
 const StaffTable: React.FC<{ staffs: Array<StaffType> }> = ({ staffs }) => {
   return (

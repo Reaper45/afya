@@ -33,27 +33,3 @@ describe("Test correct home layout", () => {
     expect(component.containsMatchingElement(<Header />));
   });
 });
-
-it("renders visits correctly", () => {
-  const component = mount(
-    <ThemeProvider theme={theme}>
-      <Router history={history}>
-        <Home />
-      </Router>
-    </ThemeProvider>
-  );
-  expect(
-    component.find('[data-name="visit-items"]').find("button")
-  ).toHaveLength(6);
-});
-
-it("renders issues correctly", () => {
-  const component = mount(
-    <ThemeProvider theme={theme}>
-      <Router history={history}>
-        <Home />
-      </Router>
-    </ThemeProvider>
-  );
-  expect(component.find('[data-name="issues"]').find("button")).toHaveLength(6);
-});

@@ -183,6 +183,59 @@ exports[`Test correct home layout renders without crashing 1`] = `
             </Button>
           </div>
         </Styled(section)>
+        <Chart
+          data={
+            Array [
+              "Foot Fall",
+              30,
+              220,
+              100,
+              300,
+              340,
+              500,
+            ]
+          }
+          delta="+0.2"
+          description="Patients"
+          id="chart-1"
+          title="Foot Fall"
+          value="13k"
+        />
+        <Chart
+          data={
+            Array [
+              "Patients Satisfaction",
+              30,
+              200,
+              100,
+              400,
+              150,
+            ]
+          }
+          delta="-0.1"
+          description="NPS"
+          id="chart-2"
+          title="Patients Satisfaction"
+          value="7.8"
+        />
+        <Chart
+          data={
+            Array [
+              "Revenue",
+              30,
+              200,
+              100,
+              400,
+              380,
+              450,
+            ]
+          }
+          delta="+1.24"
+          description="Kenyan Shillings"
+          id="chart-3"
+          title="Revenue"
+          value="4.2m"
+        />
         <Styled(section)>
           <StaffTable
             staffs={

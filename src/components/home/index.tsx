@@ -3,14 +3,15 @@ import { useState } from "react";
 
 // Local Files
 import styled from "lib/emotion";
-import Nav from "./Nav";
-import Header from "./Header";
 import SectionTitle from "components/common/SectionTitle";
 import SectionWrapper from "components/common/SectionWrapper";
 import FilterItem from "components/common/FilterItem";
 import Button, { ButtonGroup } from "components/common/Button";
 import { calenderIcon } from "components/common/Icon";
 import StaffTable, { StaffType } from "./StaffTable";
+import Nav from "./Nav";
+import Header from "./Header";
+import Chart from "./Chart";
 
 const HomeWrapper = styled("div")`
   display: flex;
@@ -46,8 +47,7 @@ const Grid = styled("div")`
 `;
 
 const Visits = styled(SectionWrapper)`
-  // height: 100%;
-  grid-row: 1 / 4;
+  grid-row: 1 / 5;
   button {
     width: 100%;
   }
@@ -203,6 +203,30 @@ export default function Home() {
                 </Button>
               </div>
             </MonitoringPeriod>
+            <Chart
+              id="chart-1"
+              title="Foot Fall"
+              value="13k"
+              description="Patients"
+              delta="+0.2"
+              data={["Foot Fall", 30, 220, 100, 300, 340, 500]}
+            />
+            <Chart
+              id="chart-2"
+              title="Patients Satisfaction"
+              value="7.8"
+              description="NPS"
+              delta="-0.1"
+              data={["Patients Satisfaction", 30, 200, 100, 400, 150]}
+            />
+            <Chart
+              id="chart-3"
+              title="Revenue"
+              value="4.2m"
+              description="Kenyan Shillings"
+              delta="+1.24"
+              data={["Revenue", 30, 200, 100, 400, 380, 450]}
+            />
             <Staffs>
               <StaffTable staffs={staffs} />
             </Staffs>

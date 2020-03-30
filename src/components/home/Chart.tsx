@@ -80,9 +80,9 @@ class Chart extends React.Component<{
     this.renderChart(this.props.id, this.props.data);
   }
 
-  componentDidUpdate() {
-    this.renderChart(this.props.id, this.props.data);
-  }
+  // componentDidUpdate() {
+  //   this.renderChart(this.props.id, this.props.data);
+  // }
 
   renderChart = (id: string, data: [string, ...Primitive[]]) => {
     const chart = c3.generate({

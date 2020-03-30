@@ -4,7 +4,7 @@
 
 To run that demo on your own computer:
 * Clone this repository
-* `npm install`
-* `npm run storybook`
+* `yarn install`
+* `yar start`
 * Visit http://localhost:3000/
 

@@ -2,6 +2,7 @@
   "name": "afya",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://reaper45.github.io/afya",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
@@ -30,7 +31,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:save": "prettier --write \"src/components/**\"",
-    "precommit": "yarn run lint:save && yarn test"
+    "precommit": "yarn run lint:save && yarn test",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
@@ -62,9 +65,11 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.10",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "yarn": "^1.22.4"
   },
   "jest": {
     "snapshotSerializers": [

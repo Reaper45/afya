@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/afya/static/css/main.36597463.chunk.css",
+    "main.js": "/afya/static/js/main.cc18e070.chunk.js",
+    "main.js.map": "/afya/static/js/main.cc18e070.chunk.js.map",
+    "runtime-main.js": "/afya/static/js/runtime-main.a2ecf579.js",
+    "runtime-main.js.map": "/afya/static/js/runtime-main.a2ecf579.js.map",
+    "static/css/2.a7ba36b5.chunk.css": "/afya/static/css/2.a7ba36b5.chunk.css",
+    "static/js/2.5224354c.chunk.js": "/afya/static/js/2.5224354c.chunk.js",
+    "static/js/2.5224354c.chunk.js.map": "/afya/static/js/2.5224354c.chunk.js.map",
+    "index.html": "/afya/index.html",
+    "precache-manifest.b43c02d0ab5c8f4b356344ea3e32598e.js": "/afya/precache-manifest.b43c02d0ab5c8f4b356344ea3e32598e.js",
+    "service-worker.js": "/afya/service-worker.js",
+    "static/css/2.a7ba36b5.chunk.css.map": "/afya/static/css/2.a7ba36b5.chunk.css.map",
+    "static/css/main.36597463.chunk.css.map": "/afya/static/css/main.36597463.chunk.css.map",
+    "static/js/2.5224354c.chunk.js.LICENSE.txt": "/afya/static/js/2.5224354c.chunk.js.LICENSE.txt",
+    "static/media/avatar.jpg": "/afya/static/media/avatar.72b63f3e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2ecf579.js",
+    "static/css/2.a7ba36b5.chunk.css",
+    "static/js/2.5224354c.chunk.js",
+    "static/css/main.36597463.chunk.css",
+    "static/js/main.cc18e070.chunk.js"
+  ]
+}
